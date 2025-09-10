@@ -62,7 +62,7 @@ if(cityName == "Karachi")
     alert("given condition for variable b is true");
    }
    
-      output:
+    //   output:
     //not displayed
 
 // c.
@@ -134,6 +134,39 @@ if (true)
 //    output:
 //    displayed
 
+//  Q6
+
+var subject1 = parseInt(prompt("Enter marks for Subject 1:"));
+    var subject2 = parseInt(prompt("Enter marks for Subject 2:"));
+    var subject3 = parseInt(prompt("Enter marks for Subject 3:"));
+    var totalMarks = 300; 
+
+    var obtainedMarks = subject1 + subject2 + subject3;
+    var percentage = (obtainedMarks / totalMarks) * 100;
+    var grade;
+    var remarks = "";
+
+    if (percentage >= 80) {
+      grade = "A-one";
+      remarks = "Excellent!";
+    } else if (percentage >= 70) {
+      grade = "A";
+      remarks = "Good";
+    } else if (percentage >= 60) {
+      grade = "B";
+      remarks = "You need to improve";
+    }  else {
+      grade = "Fail";
+      remarks = "Sorry";
+    }
+    document.write("<h2>Marks Sheet</h2>");
+    document.write("Total Marks: " + totalMarks + "<br>");
+    document.write("Marks Obtained: " + obtainedMarks + "<br>");
+    document.write("Percentage: " + percentage + "%<br>");
+    document.write("Grade: " + grade + "<br>");
+    document.write("Remarks: " + remarks + "<br>");
+
+
 // Q7
   var secretNum = 6;
   var userNumInput = +prompt("Guess a Number ,Ranging from 1-10");
@@ -190,3 +223,97 @@ else if (temp >= 10 && temp <= 20)
     {
     alert("OMG! Today’s weather is so Cool.")
 }
+
+// Q11
+  var num1 = +prompt("Enter the first number:");
+    var num2 = +prompt("Enter the second number:");
+    var operation = prompt("Enter the operation (+, -, *, /, %):");
+
+    var result;
+
+    if (operation === "+") {
+      result = num1 + num2;
+    } 
+    else if (operation === "-") {
+      result = num1 - num2;
+    } 
+    else if (operation === "*") {
+      result = num1 * num2;
+    } 
+    else if (operation === "/") {
+      if(num2 === 0){
+        alert("Error! Division by zero is not allowed.");
+      } else {
+        result = num1 / num2;
+      }
+    } 
+    else if (operation === "%") {
+      if(num2 === 0){
+        alert("Error! Modulus by zero is not allowed.");
+      } else {
+        result = num1 % num2;
+      }
+    } 
+    else {
+      alert("Invalid operation! Please enter +, -, *, / or %.");
+    }
+    if(result !== undefined){
+      alert("Result: " + result);
+    }
+// ---------------------------------------------(Chapter: 12-13)-------------------------------------------------
+
+// Q2
+var num1 = +prompt("Enter the first integer:");
+    var num2 = +prompt("Enter the second integer:");
+
+    if (num1 > num2) {
+      alert(num1 + " is larger than " + num2);
+    } else if (num2 > num1) {
+      alert(num2 + " is larger than " + num1);
+    } else {
+      alert("Both numbers are equal: " + num1 + " = " + num2);
+    }
+
+// Q3
+ var number = Number(prompt("Enter a number:"));
+
+    if(number > 0){
+      alert(number + " is a Positive number ");
+    } else if(number < 0){
+      alert(number + " is a Negative number ");
+    } else {
+      alert("The number is Zero ");
+    }
+
+// Q4
+ var vow = prompt("Enter a vowels:")
+
+    if(vow === "a" || vow === "e" || vow === "i" || vow === "o" || vow === "u"){
+      alert(true);  
+    } else {
+      alert(false); 
+    }
+
+//  Q5
+
+var correctPassword = "Pakistan274";
+    var userPassword = prompt("Enter your password:");
+    if(userPassword === ""){
+      alert("Please enter your password");
+    } 
+    else if(userPassword === correctPassword){
+      alert("Correct! The password you entered matches the original password");
+    } 
+    else {
+      alert("Incorrect password");
+    }
+
+//   Q6
+var hour = +prompt("Enter the current hour");
+var greeting;
+if (hour < 18) {
+  greeting = "Good day";
+} else {
+  greeting = "Good evening";
+}
+alert(greeting);

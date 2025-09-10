@@ -136,9 +136,9 @@ if (true)
 
 //  Q6
 
-var subject1 = parseInt(prompt("Enter marks for Subject 1:"));
-    var subject2 = parseInt(prompt("Enter marks for Subject 2:"));
-    var subject3 = parseInt(prompt("Enter marks for Subject 3:"));
+var subject1 = +prompt("Enter marks for Subject 1:");
+    var subject2 = +prompt("Enter marks for Subject 2:");
+    var subject3 = +prompt("Enter marks for Subject 3:");
     var totalMarks = 300; 
 
     var obtainedMarks = subject1 + subject2 + subject3;
